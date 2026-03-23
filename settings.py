@@ -1,5 +1,5 @@
 class Settings():
-    """a class to store all settings"""
+    """A class to store all settings."""
 
     def __init__(self):
         self.screen_width  = 1200

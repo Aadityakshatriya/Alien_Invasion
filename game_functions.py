@@ -5,7 +5,7 @@ from alien import Alien
 from bullet import Bullet
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
-    """Respond to keypress"""
+    """Respond to keypress."""
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
@@ -16,13 +16,13 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         sys.exit()
 
 def fire_bullet(ai_settings, screen, bullets, ship):
-    """Fire a bullet if limit is not reached yet"""
+    """Fire a bullet if limit is not reached yet."""
     if len(bullets) < ai_settings.bullets_allowed:
             new_bullet = Bullet(ai_settings, screen, ship)
             bullets.add(new_bullet)
 
 def check_keyup_events(event,ship):
-    """Respond to keyrelease"""
+    """Respond to keyrelease."""
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
     elif event.key == pygame.K_LEFT:
@@ -41,7 +41,7 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event,ship)
 
 def update_screen(ai_settings, screen, ship, aliens, bullets):
-    """Update images on the screen and flip to new screen"""
+    """Update images on the screen and flip to new screen."""
 
 
     #redraw the screen during each pass through the loop.
