@@ -28,7 +28,7 @@ class Ship():
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
 
-        #update rect object from self.center
+        #update rect object from self.center.
         self.rect.centerx = self.center
     def center_ship(self):
         """Center the ship on the screen."""
